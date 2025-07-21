@@ -1,0 +1,11 @@
+{% extends 'website/base.html' %}
+{% block title %}About | Tshepo Mongali{% endblock %}
+{% load static %}
+{% block content %}
+<section>
+    <h2>About Me</h2>
+<img src="{% static 'website/images/tshepo.jpg' %}" alt="Tshepo Mongali"
+         style="width:200px; border-radius: 50%; margin-bottom: 20px;">
+    <p>I am a BCom Information Systems graduate from North West University with a passion for web development and IT solutions. I enjoy building tools and applications that help people and businesses thrive in a digital world.</p>
+</section>
+{% endblock %}

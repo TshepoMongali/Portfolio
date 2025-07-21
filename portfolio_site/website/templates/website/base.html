@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tshepo Mongali{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    
+</head>
+    <header>
+        <h1>Tshepo Mongali</h1>
+    <nav style="background: #333; padding: 1rem;">
+        <ul style="list-style: none; display: flex; gap: 1rem; margin: 0; color: white;">
+            <li><a href="/" style="color: white; text-decoration: none;">Home</a></li>
+            <li><a href="/about/" style="color: white; text-decoration: none;">About</a></li>
+            <li><a href="/projects/" style="color: white; text-decoration: none;">Projects</a></li>
+            <li><a href="/skills/" style="color: white; text-decoration: none;">Skills</a></li>
+            <li><a href="/contact/" style="color: white; text-decoration: none;">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+<body>
+
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+    <footer>
+        <p>&copy; 2025 Tshepo Mongali</p>
+    </footer>
+</html>
