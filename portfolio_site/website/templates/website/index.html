@@ -1,8 +1,36 @@
 {% extends 'website/base.html' %}
+{% load static %}
 {% block title %}Home | Tshepo Mongali{% endblock %}
+
 {% block content %}
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>I’m a junior web developer passionate about building functional and visually appealing websites.</p>
-    </section>
+<section class="min-h-screen bg-gray-900 text-white px-6 py-16">
+  <div class="max-w-3xl mx-auto text-center">
+    
+    <h2 class="text-4xl font-bold mb-6">Hi, I'm Tshepo 👋<br>Welcome to My Portfolio</h2>
+
+    <img 
+      src="{% static 'website/images/tshepo.jpg' %}" 
+      alt="Tshepo Mongali"
+      class="w-52 h-52 rounded-full mx-auto mb-6 border-4 border-indigo-600"
+    >
+
+    <ol class="text-lg text-gray-300 space-y-4 mb-8 text-left sm:text-center sm:px-8">
+      <li>
+        I’m a junior web developer passionate about building functional and visually appealing websites.
+      </li>
+      <li>
+        I am a BCom Information Systems graduate from North West University with a passion for web development and IT solutions. I enjoy building tools and applications that help people and businesses thrive in a digital world.
+      </li>
+    </ol>
+
+    <div class="mt-8 flex justify-center flex-wrap gap-4">
+      <a href="/projects/" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition duration-300">
+        View Projects
+      </a>
+      <a href="/contact/" class="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+        Get In Touch
+      </a>
+    </div>
+  </div>
+</section>
 {% endblock %}

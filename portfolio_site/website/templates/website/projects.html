@@ -1,12 +1,61 @@
-{% extends 'website/base.html' %}
-{% block title %}Projects | Tshepo Mongali{% endblock %}
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Projects - Tshepo Mongali{% endblock %}
+
 {% block content %}
-<section>
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>People Analytics Dashboard</strong> - A Django-based dashboard that visualizes workforce data using Chart.js.</li>
-        <li><strong>Forex Trading Bot</strong> - In development, automating trades on MetaTrader based on smart money concepts.</li>
-        <li><strong>Portfolio Website</strong> - This personal site built with Django and HTML to showcase my skills and achievements.</li>
-    </ul>
+<section class="min-h-screen bg-gray-900 text-white px-6 py-12">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-10">My Projects</h1>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center gap-4 mb-10">
+      <button onclick="filterProjects('all')" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500">All</button>
+      <button onclick="filterProjects('web')" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">Web</button>
+      <button onclick="filterProjects('bot')" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">Bots</button>
+      <button onclick="filterProjects('dashboard')" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">Dashboards</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projectsGrid" class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Example Project Card -->
+      <div class="project-card bg-gray-800 rounded-2xl shadow-md p-6 hover:bg-gray-700 transition-all" data-category="dashboard">
+        <h2 class="text-2xl font-semibold mb-2">People Analytics Dashboard</h2>
+        <p class="text-gray-300 text-sm mb-4">
+          Django + Chart.js dashboard for visualizing HR insights.
+        </p>
+        <a href="#" class="inline-block text-indigo-400 hover:underline">View Project</a>
+      </div>
+
+      <div class="project-card bg-gray-800 rounded-2xl shadow-md p-6 hover:bg-gray-700 transition-all" data-category="bot">
+        <h2 class="text-2xl font-semibold mb-2">Forex Trading Bot</h2>
+        <p class="text-gray-300 text-sm mb-4">
+          Smart money concept bot using MQL5 on MetaTrader.
+        </p>
+        <a href="#" class="inline-block text-indigo-400 hover:underline">View Project</a>
+      </div>
+
+      <div class="project-card bg-gray-800 rounded-2xl shadow-md p-6 hover:bg-gray-700 transition-all" data-category="web">
+        <h2 class="text-2xl font-semibold mb-2">Portfolio Website</h2>
+        <p class="text-gray-300 text-sm mb-4">
+          Django and Tailwind-based personal site.
+        </p>
+        <a href="#" class="inline-block text-indigo-400 hover:underline">View Project</a>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+<!-- Filtering Script -->
+<script>
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      const match = category === 'all' || card.dataset.category === category;
+      card.style.display = match ? 'block' : 'none';
+    });
+  }
+</script>
 {% endblock %}

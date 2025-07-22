@@ -1,15 +1,39 @@
 {% extends 'website/base.html' %}
 {% block title %}Contact | Tshepo Mongali{% endblock %}
 {% load static %}
+
 {% block content %}
-<section>
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ktmongali@gmail.com">ktmongali@gmail.com</a></p>
-    <p>Phone: 071 024 3477</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/tshepo-mongali-82483320b" target="_blank">Tshepo Mongali</a></p>
-    
+<section class="min-h-screen bg-gray-900 text-white px-6 py-16">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
 
-<p> <a href="{% static 'website/files/Tshepo_Mongali_CV.pdf' %}" download>Download My CV (PDF)</a></p>
+    <div class="text-lg text-gray-300 space-y-6">
+      <p>
+        <span class="font-semibold text-white">Email:</span>
+        <a href="mailto:ktmongali@gmail.com" class="text-indigo-400 hover:underline">
+          ktmongali@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <span class="font-semibold text-white">Phone:</span> 071 024 3477
+      </p>
+
+      <p>
+        <span class="font-semibold text-white">LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/tshepo-mongali-82483320b" target="_blank" class="text-indigo-400 hover:underline">
+          Tshepo Mongali
+        </a>
+      </p>
+
+      <p>
+        <a href="{% static 'website/files/Resume.pdf' %}" 
+           class="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
+           download>
+          Download My CV (PDF)
+        </a>
+      </p>
+    </div>
+  </div>
 </section>
-
 {% endblock %}

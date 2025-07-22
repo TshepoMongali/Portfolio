@@ -1,35 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Tshepo Mongali{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tshepo Mongali's professional portfolio website." />
+  <title>{% block title %}Portfolio{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-    <header>
-        <h1>Tshepo Mongali</h1>
-    <nav style="background: #333; padding: 1rem;">
-        <ul style="list-style: none; display: flex; gap: 1rem; margin: 0; color: white;">
-            <li><a href="/" style="color: white; text-decoration: none;">Home</a></li>
-            <li><a href="/about/" style="color: white; text-decoration: none;">About</a></li>
-            <li><a href="/projects/" style="color: white; text-decoration: none;">Projects</a></li>
-            <li><a href="/skills/" style="color: white; text-decoration: none;">Skills</a></li>
-            <li><a href="/contact/" style="color: white; text-decoration: none;">Contact</a></li>
-        </ul>
-    </nav>
-    </header>
-<body>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <h1 class="text-xl font-bold"><a href="/">Tshepo Mongali</a></h1>
+      </br>
+      <nav class="space-x-4 text-sm sm:text-base">
+        <a href="/" class="hover:underline">Home</a>
 
-    
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+        <a href="/skills/" class="hover:underline">Skills</a>
 
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; {{ now.year }} Tshepo Mongali. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-2">
+        <a href="mailto:ktmongali@gmail.com" class="hover:underline">Email</a>
+        <a href="https://www.linkedin.com/in/tshepo-mongali-82483320b" target="_blank" class="hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  {% block extra_scripts %}{% endblock %}
 </body>
-    <footer>
-        <p>&copy; 2025 Tshepo Mongali</p>
-    </footer>
 </html>

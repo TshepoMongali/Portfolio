@@ -1,13 +1,46 @@
-{% extends 'website/base.html' %}
+{% extends "website/base.html" %}
+{% load static %}
+
 {% block title %}Skills | Tshepo Mongali{% endblock %}
+
 {% block content %}
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>Languages: Python, HTML, CSS, JavaScript</li>
-        <li>Frameworks & Tools: Django, Chart.js, Git, SQL</li>
-        <li>Certifications: IBM Cyber Security Fundamentals</li>
-        <li>Soft Skills: Teamwork, Problem-solving, Analytical Thinking</li>
-    </ul>
-</section>
+<div class="max-w-4xl mx-auto py-10">
+  <h1 class="text-3xl font-bold text-center mb-6">🧠 My Skills</h1>
+  <p class="text-center text-gray-600 dark:text-gray-300 mb-10">
+    A snapshot of the technical and soft skills I’ve acquired through study and projects.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Skill Card -->
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Python</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Experience with scripting, data analysis, and Django.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">HTML, CSS & JavaScript</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Responsive websites with Tailwind & basic interactivity.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Django</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Full-stack web apps using Django framework.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">SQL & Databases</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Query writing, relational design, and database interaction.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Git & GitHub</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Version control and project collaboration.</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Teamwork & Communication</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-300">Proven ability to collaborate and present ideas effectively.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
