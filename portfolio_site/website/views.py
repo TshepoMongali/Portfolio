@@ -16,6 +16,8 @@ def skills(request):
 
 def contact(request):
     return render(request, 'website/contact.html')
+def experince(request):
+    return render(request, 'website/experience.html')
 
 def contact_view(request):
     if request.method == 'POST':
